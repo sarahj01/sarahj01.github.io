@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Girls Who Code Rocks!</title>
+		<link rel = "stylesheet" href = "saritawebsite.css">
+		<script src= "java.js"> </script>
+	</head>
+		<body>
+			<h1> Bienvenidos al sitio web de Sarah J.!</h1>
+			<a href = "text.html"> <h2 id = "aboutme" >About Me </h2></a>
+			<a href = "https://www.instagram.com/lunaxamor/?hl=en">
+				<img id = "link" src = "insta.png">
+			</a>
+			<a href = "https://www.facebook.com/sarah.jhingan">
+				<img id = "link2" src = "facebook.png">
+			</a>
+			<img id = "hi" src = "maui.jpg" border= "10" onclick = changeimg()> 
+			<h2> My Portfolio of CS projects </h2>
+				<img src = "password.hash.jpg" alt = Password Hash border= "10">
+				<h3 >Password Hash</h3>
+				<div id = "sarita">
+				For this project, we used a hash function to scramble passwords that a user was prompted to input at 
+				the login screen. If the hashed password was unrecognized in our list of hashed passwords, we would then prompt 
+				them to create an account. However, if it was recognized, it would print out, "login successful"
+				</div>
+				<h2> Other CS Projects </h2>
+				<ul class = "boxed">
+					<li>Bouncing Ball</li>
+					<li>City Scroller</li>
+					<li>Documentation Scavenger Hunt</li>
+					<li>Obamicon</li>
+					<li>Madlibs</li>
+					<li>Paddleball</li>
+				</ul>
+				<h3>My Google Maps Demo</h3>
+					<p>My family's hometown is in Tegucigalpa, Honduras.</p>
+ <div id="map"></div>
+	<script>
+	function initMap() {
+        var mapDiv = document.getElementById("map");
+        var map = new google.maps.Map(mapDiv, {
+            center: myLatLng,
+            zoom: 8
+        });
+		var contentString =	
+			'<div id="content">'+
+			'<div id="siteNotice">'+
+			'</div>'+
+			'<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+			'<div id="bodyContent">'+
+			'<p class = "info"><b>Tegucigalpa</b>,is a large city in the Central American country, Honduras.' +
+			'The primary language spoken is Spanish and a majority of the population practices Roman Catholicism.'+
+			'</p>'+
+			'<p class = "info">Attribution: Tegucigalpa, <a href="https://en.wikipedia.org/wiki/Tegucigalpa">'+
+			'</a>'+
+			'(last visited June 22, 2009).</p>'+
+			'</div>'+
+			'</div>';
+			
+		
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString
+	    });
+		var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var icons = {
+          info: {
+            icon: iconBase + 'parking_lot_maps.png'
+          },
+          info2: {
+            icon: iconBase + 'library_maps.png'
+          },
+          info3: {
+            icon: iconBase + 'info-i_maps.png'
+          }
+		  info4: {
+            icon: iconBase + 'info-i_maps.png'
+          }info5: {
+            icon: iconBase + 'info-i_maps.png'
+          }info6: {
+            icon: iconBase + 'info-i_maps.png'
+          }
+		  info7: {
+            icon: iconBase + 'info-i_maps.png'
+          }
+        };
+		function addMarker(feature) {
+			var marker = new google.maps.Marker({
+				position: feature.position,
+				map: map,
+				icon: icons[feature.type].icon,
+				title: 'Hello World!'
+		});
+		}
+		var features = [
+			{
+			position: new google.maps.LatLng(14.061988,-87.193851),
+			type = 'info'
+			}, {
+            position: new google.maps.LatLng(49.954535,-125.205248),
+            type: 'info2'
+          }, {
+            position: new google.maps.LatLng(47.774583,-122.383959),
+            type: 'info3'
+          }, {
+            position: new google.maps.LatLng(47.756985,-122.331177),
+            type: 'info4'
+          }, {
+            position: new google.maps.LatLng(43.654460,-79.382164),
+            type: 'info5'
+          }, {
+            position: new google.maps.LatLng(34.020226,-118.490403),
+            type: 'info6'
+          }, {
+			position: new google.maps.LatLng(37.770715,-122.421513),
+			type: 'info7'
+		  }
+        ];
+		for (var i = 0, feature; feature = features[i]; i++) {
+          addMarker(feature);
+        }
+		marker.addListener('click', function() {
+			infowindow.open(map, marker);
+		});
+		marker.setMap(map);
+    }
+	
+	</script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlB1sX3ImZL0QkNm2QFZw8QQrBJY_yiCw&callback=initMap">
+    </script>
+	   <div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="campbellriver.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="maui.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="maui2.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+			</body>
+	<html>

@@ -1,0 +1,15 @@
+print("Mad libs")
+myname = input("Person name:")
+name = input ("Person name:")
+object = input("object:")
+activity = input("type of activity:")
+adjective = input("adjective:")
+creature = input ("creature:")
+activity2 = input ("activity:")
+activity3 = input ("activity:")
+print("One day, " + name + " went on a walk with " + myname)
+print("They came across a(n)" + object + " that was " + activity) 
+print("Little did they know, that lurking around the corner was a" + adjective + creature)
+print("The" + creature + ",snarling as it paced the trodden ground" + activity3 + "them" )
+
+
